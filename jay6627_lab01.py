@@ -3,7 +3,6 @@
 # Lang/Ver: Python 3.11
 # OS: Linux (Omega server)
 #
-# Recursive Directory Space – Python (Scripting)
 # Uses a recursive function with os.scandir.
 # Skips symlinks to avoid infinite loops. Prints only the byte total.
 
