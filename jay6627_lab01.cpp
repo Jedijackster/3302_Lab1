@@ -33,11 +33,11 @@ static bool joinPath(const std::string& base, const char* name, std::string& out
     else
         out = base + "/" + name;
 
-    // Rough guard: ensure it won’t overflow typical C buffers, though we use std::string
+    // Ensures it won’t overflow typical C buffers, though we use std::string
     return out.size() < PATH_MAX;
 }
 
-// Recursive function: Returns total size (bytes) of regular files under 'path'.
+// Returns total size (bytes) of regular files under 'path'.
 
 static uint64_t sumDir(const std::string& path) {
     uint64_t total = 0;
