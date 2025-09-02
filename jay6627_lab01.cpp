@@ -3,7 +3,6 @@
  * Lang/Ver: C++17
  * OS: Linux (Omega server)
  *
- * Recursive Directory Space – C++ version
  * Recursively sum sizes of regular files starting at ".".
  * Skips symlinks to avoid loops and double-counting.
  * Prints only the integer byte total (no extra text).
