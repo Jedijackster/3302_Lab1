@@ -3,7 +3,6 @@
  * Lang/Ver: C17 (GCC)
  * OS: Linux (Omega server)
  *
- * Recursive Directory Space – C (Procedural)
  * Walk the current directory "." and sum sizes of regular files.
  * Excludes symlinks (to avoid loops / double-count).
  * Prints only the integer total in bytes.
@@ -23,7 +22,7 @@ static int is_dot_or_dotdot(const char *name) {
     return (strcmp(name, ".") == 0 || strcmp(name, "..") == 0);
 }
 
-/* join path safely into out; returns 0 on success, -1 on overflow */
+// join path safely into out; returns 0 on success, -1 on overflow
 static int join_path(const char *base, const char *name, char *out, size_t outsz) {
     size_t blen = strlen(base);
     int need_sep = (blen > 0 && base[blen - 1] != '/');
@@ -31,7 +30,7 @@ static int join_path(const char *base, const char *name, char *out, size_t outsz
     return (n >= 0 && (size_t)n < outsz) ? 0 : -1;
 }
 
-/* Recursive function you wrote (required): returns sum of file sizes under 'path'. */
+// Recursive function you wrote (required): returns sum of file sizes under 'path'.
 static unsigned long long sum_dir(const char *path) {
     unsigned long long total = 0ULL;
 
