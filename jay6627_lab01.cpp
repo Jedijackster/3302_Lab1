@@ -38,9 +38,8 @@ static bool joinPath(const std::string& base, const char* name, std::string& out
     return out.size() < PATH_MAX;
 }
 
-/* Recursive function (required by assignment):
- * Returns total size (bytes) of regular files under 'path'.
- */
+// Recursive function: Returns total size (bytes) of regular files under 'path'.
+
 static uint64_t sumDir(const std::string& path) {
     uint64_t total = 0;
 
